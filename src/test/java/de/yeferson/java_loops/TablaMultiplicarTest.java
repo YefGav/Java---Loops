@@ -15,22 +15,22 @@ public class TablaMultiplicarTest {
 
     void testGetN() {
         TablaMultiplicar tablaMultiplicar = new TablaMultiplicar(3);
-        assertThat(tablaMultiplicar.getN(), is(3)); // Verifica el valor de n
+        assertThat(tablaMultiplicar.getN(), is(3)); 
     }
     @Test
     @DisplayName("Verifica que la instancia de multiplicar no sea nula")
 
     void testInicio() {
         TablaMultiplicar tablaMultiplicar = new TablaMultiplicar(3);
-        assertThat(tablaMultiplicar, is(notNullValue())); // Verifica que la instancia de multiplicar no sea nula
-        assertThat(tablaMultiplicar, instanceOf (TablaMultiplicar.class));// Verifica que la instancia de multiplicar sea de la clase TablaMultiplicar
+        assertThat(tablaMultiplicar, is(notNullValue()));
+        assertThat(tablaMultiplicar, instanceOf (TablaMultiplicar.class));
     }
 
     @Test
     void testMultiplicar() {
         TablaMultiplicar tablaMultiplicar = new TablaMultiplicar(3);
         int [] resultado = tablaMultiplicar.multiplicar(3);
-        assertThat(resultado, notNullValue()); // Verifica que la instancia de multiplicar no sea nula   
+        assertThat(resultado, notNullValue());   
     }
 
     @Test
