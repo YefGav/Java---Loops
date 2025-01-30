@@ -19,10 +19,18 @@ public class TablaMultiplicarTest {
         assertThat(tablamultiMultiplicar, instanceOf (TablaMultiplicar.class));// Verifica que la instancia de multiplicar sea de la clase TablaMultiplicar
     }
 
-    testMultiplicar() {
+    @Test
+    void testMultiplicar() {
         TablaMultiplicar tablamultiMultiplicar = new TablaMultiplicar();
-        int [] resultado = tablamultiMultiplicar.multiplicar(5);
-        assertThat(tablamultiMultiplicar, is(notNullValue())); // Verifica que la instancia de multiplicar no sea nula
-        
+        int [] resultado = tablamultiMultiplicar.multiplicar(3);
+        assertThat(tablamultiMultiplicar, is(notNullValue())); // Verifica que la instancia de multiplicar no sea nula   
+    }
+
+    @Test
+    void testImprimirTabla() {
+        TablaMultiplicar tablamultiplciar = new TablaMultiplicar();
+        int[] expected = new int[] {3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
+        int[] resultado = tablamultiplciar.multiplicar(3);
+        assertThat(resultado, is(expected));
     }
 }
