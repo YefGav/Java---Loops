@@ -2,6 +2,10 @@ package de.yeferson.java_loops;
 
 public class TablaMultiplicar {
     public int[]  multiplicar(int n) {
+        int[] resultado = new int[10];
+        for (int i = 0; i < 10; i++) {
+            resultado[i] = n * (i + 1);
+        }
 
         return new int [3];
     }
