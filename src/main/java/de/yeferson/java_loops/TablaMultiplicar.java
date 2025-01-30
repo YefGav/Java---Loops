@@ -7,6 +7,6 @@ public class TablaMultiplicar {
             resultado[i] = n * (i + 1);
         }
 
-        return new int [3];
+        return resultado;
     }
 }

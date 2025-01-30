@@ -23,7 +23,7 @@ public class TablaMultiplicarTest {
     void testMultiplicar() {
         TablaMultiplicar tablamultiMultiplicar = new TablaMultiplicar();
         int [] resultado = tablamultiMultiplicar.multiplicar(3);
-        assertThat(tablamultiMultiplicar, is(notNullValue())); // Verifica que la instancia de multiplicar no sea nula   
+        assertThat(resultado, notNullValue()); // Verifica que la instancia de multiplicar no sea nula   
     }
 
     @Test
