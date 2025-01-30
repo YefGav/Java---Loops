@@ -11,26 +11,33 @@ import org.junit.jupiter.api.Test;
 public class TablaMultiplicarTest {
 
     @Test
+    @DisplayName("Verifica el valor de n")
+
+    void testGetN() {
+        TablaMultiplicar tablaMultiplicar = new TablaMultiplicar(3);
+        assertThat(tablaMultiplicar.getN(), is(3)); // Verifica el valor de n
+    }
+    @Test
     @DisplayName("Verifica que la instancia de multiplicar no sea nula")
 
     void testInicio() {
-        TablaMultiplicar tablamultiMultiplicar = new TablaMultiplicar();
-        assertThat(tablamultiMultiplicar, is(notNullValue())); // Verifica que la instancia de multiplicar no sea nula
-        assertThat(tablamultiMultiplicar, instanceOf (TablaMultiplicar.class));// Verifica que la instancia de multiplicar sea de la clase TablaMultiplicar
+        TablaMultiplicar tablaMultiplicar = new TablaMultiplicar(3);
+        assertThat(tablaMultiplicar, is(notNullValue())); // Verifica que la instancia de multiplicar no sea nula
+        assertThat(tablaMultiplicar, instanceOf (TablaMultiplicar.class));// Verifica que la instancia de multiplicar sea de la clase TablaMultiplicar
     }
 
     @Test
     void testMultiplicar() {
-        TablaMultiplicar tablamultiMultiplicar = new TablaMultiplicar();
-        int [] resultado = tablamultiMultiplicar.multiplicar(3);
+        TablaMultiplicar tablaMultiplicar = new TablaMultiplicar(3);
+        int [] resultado = tablaMultiplicar.multiplicar(3);
         assertThat(resultado, notNullValue()); // Verifica que la instancia de multiplicar no sea nula   
     }
 
     @Test
     void testImprimirTabla() {
-        TablaMultiplicar tablamultiplciar = new TablaMultiplicar();
+        TablaMultiplicar tablamultiplicar = new TablaMultiplicar(3);
         int[] expected = new int[] {3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-        int[] resultado = tablamultiplciar.multiplicar(3);
+        int[] resultado = tablamultiplicar.multiplicar(3);
         assertThat(resultado, is(expected));
     }
 }
